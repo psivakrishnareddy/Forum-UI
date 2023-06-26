@@ -1,0 +1,11 @@
+.threads-list-container 
+{
+    display: grid;
+    margin-top: 5px;
+    grid-template-rows: repeat(5,1fr);
+}
+
+.questions-queue-container 
+{
+    margin-top: -15px;
+}

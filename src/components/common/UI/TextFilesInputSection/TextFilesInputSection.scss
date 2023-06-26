@@ -1,0 +1,12 @@
+.text-area-reply {
+    resize: none;
+    min-height: 50px;
+    height: 50px;
+    &:focus {
+        outline: none;
+    }
+}
+
+.attachment-icon {
+    transform: rotate(135deg);
+}

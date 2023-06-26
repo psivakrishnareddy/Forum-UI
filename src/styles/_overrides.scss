@@ -1,0 +1,26 @@
+.swam-accordian{
+    // .accordion-item {
+    //     margin-top: 30px;
+    // }
+    .accordion-button {
+        font-size: 22px;
+        font-weight: bold;
+        &:focus {
+            box-shadow: none;
+            border-color: rgba(0,0,0,.125);
+        }
+        &:not(.collapsed) {
+            color:   #066fad;
+        }
+    }
+   
+   
+}
+
+.btn {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 0px 1px;
+}
+
+p {
+    margin: 0;
+}

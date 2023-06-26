@@ -1,0 +1,67 @@
+/* The following block can be included in a custom.scss */
+/* import bootstrap to set changes */
+/* make the customizations */
+$theme-colors: (
+    "primary": #066fad,
+    "secondary": #ededed,
+    "success": #28a745,
+    "info": #17a2b8,
+    "warning": #f6aa34,
+    "danger": #ED6A5E,
+    "light": #f8f9fa,
+    "dark": #343a40,
+    "purple": #90a4e1,
+    "gray": #958f8f,
+    "dark-gray": #6c6b6c,
+    "dark-indigo": #051526
+);
+
+//Font Sizes -> class fs-{number}
+$font-sizes: (
+  1: 26px,
+  2: 24px,
+  3: 22px,
+  4: 20px,
+  5: 18px,
+  6: 16px,  
+  7: 14px,
+  8: 12px,
+  9: 10px,
+  10: 8px,
+);
+
+// Tab bar overrides
+$nav-link-transition:color .50s ease-in-out, background-color .50s ease-in-out, border-color .50s ease-in-out;
+
+// Select menu
+$form-select-font-size: 12px;
+
+
+
+@import "~bootstrap/scss/bootstrap";
+@import "./utils";
+@import "./overrides";
+
+
+
+//OVERRIDE BOOTSTRAP
+.btn {
+    &:hover {
+        cursor: pointer;
+        filter: brightness(95%);
+    }
+}
+
+
+.dash-menu-card{
+    min-width: 250px;
+    width: auto;
+    .header {
+         height: 70px;
+    }
+    .dash-menu-icon {
+        background-color: #066FAD;
+        height: 40px;
+        width: 40px;
+    }
+}

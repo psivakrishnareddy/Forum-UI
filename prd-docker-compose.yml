@@ -1,0 +1,45 @@
+version: "3.4"
+services:
+  certapp-angular-v2-ui:
+    image: us.icr.io/sbsd-prod/sbsd-certapp-angular-v2-ui:prd
+    networks:
+      - frontend
+    build:
+      args:
+        configuration_file: prd
+    environment:
+      - SBSD_CERT_ENV=prd
+      - USE_DOCKER_SECRETS=true
+      - NEWRELIC_ENV=PRD
+      - SERVICE_URL=dashboard-forum-svc.sbsd.virginia.gov
+      - GOOGLE_ANALYTICS_TRACKING_ID
+      - GOOGLE_MAP_API_KEY
+      - GOOGLE_MAP_API_SERVER_KEY
+      - GOOGLE_ANALYTICS_TRACKING_ID
+    secrets:
+      - prd_cert_app_googleanalytics_tracking_id
+      - prd_cert_app_maps_api_key
+      - prd_forum_googleanalytics_tracking_id
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    logging:
+      driver: syslog
+      options:
+        syslog-address: "tcp+tls://logs6.papertrailapp.com:39872"
+        tag: "{{.Name}}"
+
+networks:
+  frontend:
+secrets:
+  prd_cert_app_googleanalytics_tracking_id:
+    external: true
+  prd_cert_app_maps_api_key:
+    external: true
+  prd_forum_googleanalytics_tracking_id:
+    external: true
+

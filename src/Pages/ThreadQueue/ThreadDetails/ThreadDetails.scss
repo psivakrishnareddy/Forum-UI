@@ -1,0 +1,76 @@
+.thread-details-container{
+    width: 100%;
+    min-height: 120px;
+    height: 100%;
+    overflow: auto;
+    border-radius: 2px;
+
+    .add-to-faqs {
+        &:hover {
+            color: #066fad!important;
+        }
+    }
+
+    .thread-right-section {
+        height: inherit;
+        width:100px;
+    }
+    .thread-left-section {
+        height: inherit;
+        width: 113%;
+    }
+    .profile-image {
+        width: 30px;
+        height: 30px;
+    }
+    .main-content {
+        max-width: 78%;
+    }
+}
+.comment-description span
+{
+    display: inline-block;
+    white-space: no-wrap;
+}
+.status-change
+{
+    font-size:18px ;
+    color:gray;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.edit-input-box
+{
+    width: 118%;
+    margin-left: -50px;
+    margin-top: 10px;
+}
+.input-box 
+{
+    width: 100%;
+}
+.disable-div 
+{
+    cursor: none;
+    pointer-events: none;
+    width: 100px;
+    opacity:0.5;
+    margin-left: 40px;
+    font-size: 18px;
+    color: gray;
+}
+.close-conversation-icon ,.edit-icon
+{
+    display: inline;
+    width:30px;
+}
+.header-icons {
+    font-size: 16px;
+    color:rgb(125, 125, 125);
+}
+.go-back 
+{
+    color: #0d6efd;
+    text-decoration: underline;
+    cursor: pointer;
+}

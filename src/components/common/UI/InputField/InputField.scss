@@ -1,0 +1,16 @@
+.input-field-wrapper{
+    .dash-input-field-wrapper {
+        height: fit-content;
+        width: 100%;
+        .form-control{
+            border: none;
+            height: 45px;
+            width: 100%;
+            &:focus {
+                border: 1px solid #066fad;
+                box-shadow: none;
+            }
+        }
+    }
+}
+

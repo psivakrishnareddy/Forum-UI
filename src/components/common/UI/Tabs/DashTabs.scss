@@ -1,0 +1,29 @@
+.tabs-header-box {
+    min-width: 20%;
+
+}
+
+.dash-tabs-header {
+    background-color: #fff;
+    min-height: 60px;
+    .nav-pills  {
+        cursor: pointer;
+        .nav-link {
+            color: #93979B; 
+            background-color: transparent;
+            border-radius: unset;
+            font-size: 16px;
+            padding: 15px;
+            // border-bottom: 5px solid transparent;
+            transition: border-bottom 0.20s ease-out;
+            &.active{
+                color: #000000;
+                border-bottom: 5px solid #051526;
+            }
+            &:hover {
+                color: #000000;
+            }
+        }
+       
+    }
+}

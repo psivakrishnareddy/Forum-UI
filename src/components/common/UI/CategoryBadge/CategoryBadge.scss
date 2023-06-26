@@ -1,0 +1,12 @@
+.catg-badge {
+    min-width: 60px;
+    width: fit-content ;
+    max-width: 175px;
+    .label > span {
+        font-size: 14px;
+    }
+}
+.indicator {
+    width: 12px;
+    height: 12px;
+}

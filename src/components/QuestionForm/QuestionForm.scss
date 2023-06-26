@@ -1,0 +1,20 @@
+.qa-form-container {
+    height: fit-content;
+    min-height: 200px;
+
+    .form-select{
+        border: none;
+        height: 45px;
+        &:focus {
+            border: 1px solid #066fad;
+            box-shadow: none;
+        }
+    }
+
+    .action-buttons{
+        .btn{
+            width:100px;
+        }
+    }
+
+}

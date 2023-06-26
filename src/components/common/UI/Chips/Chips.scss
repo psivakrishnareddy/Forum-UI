@@ -1,0 +1,38 @@
+.chip-container {
+    height: fit-content;
+    min-height: 45px;
+    width: 100%;
+    .chip {
+        background-color: rgb(8, 111, 173);
+        border: 3px solid rgba(var(--bs-secondary-rgb), var(--bs-bg-opacity));
+        color: white;
+        padding: 5px 10px;
+        border-radius: 10px;
+        .chip-remove {
+            color: rgb(208, 208, 208);
+        }
+    }
+    .darken-chip {
+        background-color: rgb(78, 78, 78);
+    }
+    &.form-control{
+        border: none;
+        // height: calc(auto + 5px);
+        width: 100%;
+        &:focus {
+            border: 1px solid #066fad;
+            box-shadow: none;
+        }
+    }
+}
+
+.tag-input {
+    border: none;
+    appearance: none;
+    background-color: transparent;
+    width: 50%;
+    height: 100%;
+    &:focus {
+        outline: none;
+    }
+}

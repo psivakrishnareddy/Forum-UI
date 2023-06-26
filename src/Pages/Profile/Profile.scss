@@ -1,0 +1,16 @@
+.profile-container{
+    .profile-card{
+        height: 320px;
+        width: 100%;
+    }
+    .profile-name 
+    {
+        word-wrap: break-word;
+        word-break: break-all;
+    }
+}
+.back-link
+{
+    cursor: pointer;
+    font-size: 17px;
+}

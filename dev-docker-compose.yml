@@ -1,0 +1,53 @@
+version: "3.4"
+services:
+  dashboard-forum-ui:
+    image: us.icr.io/sbsd-lower/sbsd-dashboard-forum-ui:dev
+    networks:
+      - frontend
+    build:
+      args:
+        configuration_file: dev
+    environment:
+      - SBSD_ENV=dev
+      - USE_DOCKER_SECRETS=true
+      - NEWRELIC_ENV=DEV
+      - AUTH0_CLIENT_ID
+      - AUTH0_CLIENT_SECRET
+      - SERVICE_URL=sbsd-dashboard-forum-services-dev.sbsd-va.net
+      - AUTH0_DOMAIN=dsbsd-dev.auth0.com
+      - AUTH0_CALLBACKURL=sbsd-dashboard-forum-ui-dev.sbsd-va.net
+      - AUTH0_RETURN_URL=sbsd-dashboard-forum-ui-dev.sbsd-va.net
+      - AUTH0_AUDIENCE=dsbsd-dashboard-service-dev.net
+      - AUTH0_BASE_URL=cdn.auth0.com
+      - TRACKING_ID=UA-131660480-1
+      - SED_IS_LIVE=true
+      - DOWNLOAD_SERVICE_URL=sbsd-dashboard-forum-services-dev.sbsd-va.net
+      - GOOGLE_ANALYTICS_TRACKING_ID
+      # - BASE_URL=sbsd-dashboard-forum-services-dev.sbsd-va.net/forum/api/
+    secrets:
+      - dev_ui_auth0_client_id
+      - dev_ui_auth0_client_secret
+      - dev_forum_googleanalytics_tracking_id
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    logging:
+      driver: syslog
+      options:
+        syslog-address: "tcp+tls://logs6.papertrailapp.com:34571"
+        tag: "{{.Name}}"
+
+networks:
+  frontend:
+
+secrets:
+  dev_ui_auth0_client_id:
+    external: true
+  dev_ui_auth0_client_secret:
+    external: true
+  dev_forum_googleanalytics_tracking_id:
+    external: true
