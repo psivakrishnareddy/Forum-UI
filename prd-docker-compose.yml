@@ -15,11 +15,9 @@ services:
       - GOOGLE_ANALYTICS_TRACKING_ID
       - GOOGLE_MAP_API_KEY
       - GOOGLE_MAP_API_SERVER_KEY
-      - GOOGLE_ANALYTICS_TRACKING_ID
     secrets:
-      - prd_cert_app_googleanalytics_tracking_id
-      - prd_cert_app_maps_api_key
-      - prd_forum_googleanalytics_tracking_id
+      - prd_ui_auth0_client_id
+      - prd_ui_auth0_client_secret
     deploy:
       resources:
         limits:
@@ -36,10 +34,8 @@ services:
 networks:
   frontend:
 secrets:
-  prd_cert_app_googleanalytics_tracking_id:
+  prd_ui_auth0_client_id:
     external: true
-  prd_cert_app_maps_api_key:
-    external: true
-  prd_forum_googleanalytics_tracking_id:
+  prd_ui_auth0_client_secret:
     external: true
 

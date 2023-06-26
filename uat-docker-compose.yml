@@ -23,6 +23,7 @@ services:
       - SED_IS_LIVE=true
       - DOWNLOAD_SERVICE_URL=sbsd-dashboard-forum-services-uat.sbsd-va.net
       # - BASE_URL=sbsd-dashboard-forum-services-uat.sbsd-va.net/forum/api/
+      - GOOGLE_ANALYTICS_TRACKING_ID
     secrets:
       - uat_ui_auth0_client_id
       - uat_ui_auth0_client_secret
@@ -43,10 +44,12 @@ services:
 networks:
   frontend:
 
-secrets:
+secrets:  
   uat_ui_auth0_client_id:
     external: true
   uat_ui_auth0_client_secret:
     external: true
   uat_forum_googleanalytics_tracking_id:
     external: true
+
+  

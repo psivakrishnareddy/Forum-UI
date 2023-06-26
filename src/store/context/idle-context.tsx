@@ -24,9 +24,10 @@ const inactiveTime = () => {
         // Clears the existing timeout
         if(idleTimeout)
         {
-          for(var i = 0; i<= idleTimeout;i++){
-            clearTimeout(i);
-          }
+          // for(var i = 0; i<= idleTimeout;i++){
+          //   clearTimeout(i);
+          // }
+          clearTimeout(idleTimeout);
         } 
 
         // Set a new idle timeout to load the redirectUrl after idleDurationSecs
